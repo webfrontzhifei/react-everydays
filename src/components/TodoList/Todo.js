@@ -8,7 +8,7 @@ const Todo = observer(({ todo }) => (
         checked={todo.finished}
         onClick={() => (todo.finished = !todo.finished)}
       />
-      {todo.title}
+      {todo.title} {todo.uiStore.height}
     </li>
   ));
 
