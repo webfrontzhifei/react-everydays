@@ -10,7 +10,7 @@ export default class TodoListModel {
     }
 
     @action
-    addTodo(title) {
-        this.todos.push(new TodoModel(title));
+    addTodo(obj) {
+        this.todos.push(new TodoModel(obj));
     }
 }

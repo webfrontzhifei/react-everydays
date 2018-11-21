@@ -6,7 +6,10 @@ export default class TodoModel {
     @observable uiStore = new BaseUIStore();
     @observable finished = false;
 
-    constructor(title) {
+    constructor(props) {
+        const { title, uiStore } = props;
+        console.log(title);
         this.title = title;
+        Object.assign(this.uiStore, uiStore);
     }
 }

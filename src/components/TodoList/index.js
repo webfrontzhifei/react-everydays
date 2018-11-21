@@ -15,7 +15,7 @@ class TodoList extends React.Component {
 
     @action
     handleFormSubmit = e => {
-        this.props.store.addTodo(this.newTodoTitle);
+        this.props.store.addTodo({title: this.newTodoTitle, uiStore: {height: '80px'}});
         this.newTodoTitle = '';
         e.preventDefault();
     }
